@@ -19,7 +19,7 @@ int Nearly_sorted(vector<int>v, int x){
         else if(v[prev]==x)return prev;
         else if(v[next]==x)return next;
         
-        else if(v[m]>v[l]){
+        else if(v[m]<x){
             l=m+2;
         }
         
