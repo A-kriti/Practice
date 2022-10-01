@@ -1,0 +1,19 @@
+// q -> https://practice.geeksforgeeks.org/problems/inorder-traversal/1
+
+// Function to return a list containing the inorder traversal of the BST.
+
+
+void inorder_traversal(Node *root,vector<int>&v){
+    
+    if(!root)return;
+    inorder_traversal(root->left,v);
+    v.push_back(root->data);
+    inorder_traversal(root->right,v);
+    
+}
+vector<int> inOrder(Node *root) {
+    // code here
+    vector<int>v;
+    inorder_traversal(root,v);
+    return v;
+}
